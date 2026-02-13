@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fun Quiz 💘</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-box">
+  <h2 id="welcome"></h2>
+  <p>What is my favorite color? 😜</p>
+  
+  <button onclick="checkAnswer('wrong')">Blue</button>
+  <button onclick="checkAnswer('correct')">Pink</button>
+  <button onclick="checkAnswer('wrong')">Green</button>
+</div>
+
+<script>
+  const name = localStorage.getItem("username");
+  document.getElementById("welcome").innerText = "Hi " + name + " 💕";
+
+  function checkAnswer(answer) {
+    if(answer === "correct") {
+      alert("Correct! 🎉 You unlocked your surprise ❤️");
+    } else {
+      alert("Oops! Try again 😜");
+    }
+  }
+</script>
+
+</body>
+</html>
